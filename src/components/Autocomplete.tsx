@@ -5,10 +5,11 @@ interface AutocompleteProps {
   suggestions: string[];
   onHandleSelection: (name: string, value: string) => void;
   type: string;
+  value: string;
 }
 
-const Autocomplete: React.FC<AutocompleteProps> = ({ suggestions, onHandleSelection, type }) => {
-  const [inputValue, setInputValue] = useState<string>('');
+const Autocomplete: React.FC<AutocompleteProps> = ({ suggestions, onHandleSelection, type, value }) => {
+  const [inputValue, setInputValue] = useState<string>(value);
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
 

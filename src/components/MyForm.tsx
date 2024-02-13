@@ -71,8 +71,25 @@ const MyForm: React.FC<MyFormProps> = ({onSubmitHandle}) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmitHandle(formData);    
+    resetForm();
   };
 
+  const resetForm = () => {
+    setFormData({
+      model: '',
+      location: '',
+      color: '',
+      noOfOwners: '',
+      yearOfManufacture: '',
+      transmission: '',
+      insuranceValidUpto: '',
+      externalFitments: '',
+      kms: '',
+      brand: '',
+      bodyType: '',
+      fuelType: ''
+    });
+  }
   const handleSelectionAutocomplete = (name: string, value: string) => {
     setFormData({
       ...formData,
@@ -84,7 +101,7 @@ const MyForm: React.FC<MyFormProps> = ({onSubmitHandle}) => {
       <div className="container">
       <div className="row">
       <div className="section">
-          <label>Model</label>
+          <label htmlFor='Model'>Model</label>
           <input
             type="text"
             name="model"
@@ -94,37 +111,37 @@ const MyForm: React.FC<MyFormProps> = ({onSubmitHandle}) => {
           />
           </div>
           <div className="section">
-          <label>Location</label>
-          <Autocomplete suggestions={jsonData?.locations ?? []} onHandleSelection={handleSelectionAutocomplete} type={'location'}/>
+          <label htmlFor='Location'>Location</label>
+          <Autocomplete suggestions={jsonData?.locations ?? []} onHandleSelection={handleSelectionAutocomplete} type={'location'} value={formData?.location}/>
           </div>
         </div>
         <div className="row">
         <div className="section">
-          <label>Color</label>
-          <Autocomplete suggestions={jsonData?.colors ?? []} type='color' onHandleSelection={handleSelectionAutocomplete}/>
+          <label htmlFor='Color'>Color</label>
+          <Autocomplete suggestions={jsonData?.colors ?? []} type='color' onHandleSelection={handleSelectionAutocomplete}value={formData?.color}/>
            </div>
            <div className="section">
-           <label>No Of Owners</label>
-          <Autocomplete suggestions={jsonData?.owners ?? []} type='noOfOwners' onHandleSelection={handleSelectionAutocomplete}/>
+           <label htmlFor='Owners'>No Of Owners</label>
+          <Autocomplete suggestions={jsonData?.owners ?? []} type='noOfOwners' onHandleSelection={handleSelectionAutocomplete} value={formData?.noOfOwners}/>
            </div>
         </div>
         <div className="row">
         <div className="section">
-          <label>Year Of Manufacture</label>
-          <Autocomplete suggestions={jsonData?.yearOfManufacture ?? []} type='yearOfManufacture' onHandleSelection={handleSelectionAutocomplete}/>
+        <label htmlFor='Manufacture'>Year Of Manufacture</label>
+          <Autocomplete suggestions={jsonData?.yearOfManufacture ?? []} type='yearOfManufacture' onHandleSelection={handleSelectionAutocomplete} value={formData?.yearOfManufacture}/>
           </div>
           <div className="section">
-          <label>Transmission</label>
-          <Autocomplete suggestions={jsonData?.transmission ?? []} type='transmission' onHandleSelection={handleSelectionAutocomplete}/>
+          <label htmlFor='Transmission'>Transmission</label>
+          <Autocomplete suggestions={jsonData?.transmission ?? []} type='transmission' onHandleSelection={handleSelectionAutocomplete} value={formData?.transmission}/>
           </div>
         </div>
         <div className="row">
         <div className="section">
-          <label>Insurance Valid Upto</label>
-          <Autocomplete suggestions={jsonData?.insuranceValidUpto ?? []} onHandleSelection={handleSelectionAutocomplete} type='insuranceValidUpto'/>
+        <label htmlFor='Insurance'>Insurance Valid Upto</label>
+          <Autocomplete suggestions={jsonData?.insuranceValidUpto ?? []} onHandleSelection={handleSelectionAutocomplete} type='insuranceValidUpto' value={formData?.insuranceValidUpto}/>
            </div>
            <div className="section">
-           <label>External Fitments</label>
+           <label htmlFor='Fitments'>External Fitments</label>
           <input
             type="text"
             name="externalFitments"
@@ -136,7 +153,7 @@ const MyForm: React.FC<MyFormProps> = ({onSubmitHandle}) => {
         </div>
         <div className="row">
         <div className="section">
-          <label>Brand</label>
+        <label htmlFor='Brand'>Brand</label>
           <input
             type="text"
             name="brand"
@@ -146,13 +163,13 @@ const MyForm: React.FC<MyFormProps> = ({onSubmitHandle}) => {
           />
           </div>
           <div className="section">
-          <label>Body Type</label>
-          <Autocomplete suggestions={jsonData?.bodyType ?? []} onHandleSelection={handleSelectionAutocomplete} type='bodyType'/>
+          <label htmlFor='Body'>Body Type</label>
+          <Autocomplete suggestions={jsonData?.bodyType ?? []} onHandleSelection={handleSelectionAutocomplete} type='bodyType' value={formData?.bodyType}/>
           </div>
         </div>
         <div className="row">
         <div className="section">
-          <label>Kms</label>
+        <label htmlFor='Kms'>Kms</label>
           <input
             type="text"
             name="kms"
@@ -162,8 +179,8 @@ const MyForm: React.FC<MyFormProps> = ({onSubmitHandle}) => {
           />
           </div>
           <div className="section">
-          <label>Fuel Type</label>
-          <Autocomplete suggestions={jsonData?.fuelType ?? []} onHandleSelection={handleSelectionAutocomplete} type='fuelType'/>
+          <label htmlFor='Fuel'>Fuel Type</label>
+          <Autocomplete suggestions={jsonData?.fuelType ?? []} onHandleSelection={handleSelectionAutocomplete} type='fuelType' value={formData?.fuelType}/>
           </div>
         </div>
         <div className="row">

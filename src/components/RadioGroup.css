@@ -1,0 +1,14 @@
+.group-wrapper {
+    padding-left: 20px;
+}
+.items {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.items input {
+    width: 14px;
+    margin-right: 10px;
+    margin-top: 0;
+}

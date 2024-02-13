@@ -1,0 +1,10 @@
+.card-final-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-final-detail .card-detail {
+    width: 50%;
+    margin-top: 4rem;
+}

@@ -1,0 +1,62 @@
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  }
+body {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+.section label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 600px; /* Adjust the fixed width of each section */
+  }
+  
+  .section {
+    width: 48%; /* Adjust the width of each section with some margin for better spacing */
+    border: 1px solid #ccc; /* Optional: Add a border for better visualization */
+    padding: 16px; /* Optional: Add padding for better spacing and aesthetics */
+    box-sizing: border-box; /* Include padding and border in the total width */
+  }
+  .buttonContainer {
+     display: flex;
+     align-items: center;
+    justify-content: center;
+     }
+     .buttonSelected {
+      width: 100px;
+      height: 40px;
+      background-color: #ff9b9b;
+      border-color: #ff9b9b;
+      border-radius: 8;
+      margin: 12px;
+      
+    }
+    .buttonUnSelected {width: 100px; height: 40px;
+      background-color: #ccc;
+      border-color: #ccc;
+      margin: 12px; 
+    }
+    .buttonViewAll {
+      width: 100px;
+      height: 40px;
+      background-color: #ff9b9b;
+      border-color: #ff9b9b;
+      border-radius: 8;
+      margin: 12px;
+    }

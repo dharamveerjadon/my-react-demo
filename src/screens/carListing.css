@@ -1,0 +1,20 @@
+.filter-section {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    background-color: #e6e6e6;
+    padding: 0 15px;
+    height: 100vh;
+}
+.inputContainer {
+   display: flex;
+   flex-direction: row;
+    padding: 20px;
+    align-items: flex-start;
+}
+.list-wrapper {
+    width: 80%;
+}
+.list-wrapper button {
+    width: 30%;
+}

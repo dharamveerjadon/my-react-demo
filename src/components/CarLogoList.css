@@ -1,0 +1,40 @@
+/* CarLogoList.css */
+
+.logo-wrapper {
+  background-color: #fafafa;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+.logo-wrapper button {
+ cursor: pointer;
+}
+.brand-title {
+  text-align: center;
+}
+.car-logo-list {
+    width: 100%;
+  }
+  
+  .car-logo-item {
+    text-align: center;
+    margin: 10px;
+    width: 150px;
+  }
+  
+  .car-logo-item-selected {
+    text-align: center;
+    margin: 10px;
+    width: 150px;
+    background-color: aqua;
+  }
+
+  .car-logo {
+    width: 100px; /* Adjust the size according to your needs */
+    height: 100px;
+  }
+  
+  .car-name {
+    margin-top: 5px;
+    font-size: 14px;
+  }
